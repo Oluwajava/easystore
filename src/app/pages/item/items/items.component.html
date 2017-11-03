@@ -1,0 +1,33 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+
+  <section class="content-header">
+    <h1>
+      Items
+    </h1>
+  </section>
+
+
+  <section class="content">
+    <!-- Main row -->
+    <div class="row">
+      <!-- Left col -->
+      <section class="col-lg-2 connectedSortable">
+        <ul class="sidebar-menu">
+          <li [routerLink]="['./items']" routerLinkActive="active-link"><a>Items</a></li>
+          <li [routerLink]="['./categories']" routerLinkActive="active-link"><a>Categories</a></li>
+          <li [routerLink]="['./discounts']" routerLinkActive="active-link"><a>Discounts</a></li>
+        </ul>
+
+      </section>
+
+      <section class="col-lg-10">
+        <router-outlet></router-outlet>
+
+      </section>
+
+    </div>
+    <!-- /.row (main row) -->
+  </section>
+
+</div>

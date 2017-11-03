@@ -1,0 +1,22 @@
+<div class="box box-solid">
+  <!-- Date and time range -->
+  <div class="form-group">
+    <div class="input-group padding">
+      <button type="button" class="btn btn-default pull-right" id="daterange-btn">
+                    <span>
+                      <i class="fa fa-calendar"></i> Date range picker
+                    </span>
+        <i class="fa fa-caret-down"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <canvas baseChart width="400" height="200"
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType" ></canvas>
+</div>

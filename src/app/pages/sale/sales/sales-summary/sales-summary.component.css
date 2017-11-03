@@ -1,0 +1,15 @@
+.padding {
+  padding: 10px;
+}
+
+.table-fire {
+  margin-top: 50px;
+}
+
+.box {
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.total {
+  background: #eaeaea;
+}

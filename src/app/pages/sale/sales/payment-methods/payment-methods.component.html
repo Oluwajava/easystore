@@ -1,0 +1,20 @@
+<div class="box box-solid">
+  <!-- Date and time range -->
+  <div class="form-group">
+    <div class="col-md-2">
+      <input type="text" name="daterangeInput" daterangepicker  class="form-control" />
+    </div>
+    <div>
+      <button class="btn btn-primary">Filter</button>
+    </div>
+  </div>
+
+  <canvas baseChart
+          [datasets]="_barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>

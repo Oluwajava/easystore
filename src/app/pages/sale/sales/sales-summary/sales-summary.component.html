@@ -1,0 +1,48 @@
+<div class="box box-solid">
+
+  <div class="form-group">
+    <div class="col-md-2">
+      <input type="text" name="daterangeInput" daterangepicker  class="form-control pull-right" />
+    </div>
+    <div>
+      <button class="btn btn-primary">Filter</button>
+    </div>
+  </div>
+
+  <canvas baseChart width="400" height="120"
+          [datasets]="_lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"></canvas>
+
+  <div class="form-group table-fire">
+    <table class="table dataTable">
+      <thead>
+      <tr class="heading bg-light-blue">
+        <th>Type</th>
+        <th>Sales</th>
+      </tr>
+      </thead>
+      <tbody *ngIf="paymentMethod !== null">
+      <tr>
+        <th>Cash</th>
+        <th>${{paymentMethod.cash}}</th>
+      </tr>
+      <tr>
+        <th>Card</th>
+        <th>${{paymentMethod.card}}</th>
+      </tr>
+      <tr>
+        <th>Gift Card</th>
+        <th>${{paymentMethod.giftCard}}</th>
+      </tr>
+      <tr class="total">
+        <th>Total</th>
+        <th>${{paymentMethod.cash + paymentMethod.card + paymentMethod.giftCard}}</th>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

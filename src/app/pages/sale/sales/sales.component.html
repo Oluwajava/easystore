@@ -1,0 +1,39 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+
+  <section class="content-header">
+    <h1>
+      Sales
+    </h1>
+    <ol class="breadcrumb">
+      <li>Report</li>
+      <li>Transaction</li>
+    </ol>
+  </section>
+
+
+  <section class="content">
+    <!-- Main row -->
+    <div class="row">
+      <!-- Left col -->
+      <section class="col-lg-2 connectedSortable">
+        <ul class="sidebar-menu">
+          <li [routerLink]="['./summary']" routerLinkActive="active-link"><a>Sales Summary</a></li>
+          <!--<li [routerLink]="['./trend']" routerLinkActive="active-link"><a>Sales Trend</a></li>-->
+          <li [routerLink]="['./payment']" routerLinkActive="active-link"><a>Payment Methods</a></li>
+          <li [routerLink]="['./item/sales']" routerLinkActive="active-link"><a>Item Sales</a></li>
+          <li [routerLink]="['./category/sales']" routerLinkActive="active-link"><a>Category Sales</a></li>
+          <li [routerLink]="['./employee/sales']" routerLinkActive="active-link"><a>Employee Sales</a></li>
+        </ul>
+
+      </section>
+
+      <section class="col-lg-10">
+        <router-outlet></router-outlet>
+      </section>
+
+    </div>
+    <!-- /.row (main row) -->
+  </section>
+
+</div>

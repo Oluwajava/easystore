@@ -1,0 +1,18 @@
+.user-email {
+  color: #fff !important;
+  font-weight: bolder;
+}
+
+.sidebar a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+
+.sidebar-form,
+.sidebar-menu > li.header {
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: 1.2em;
+}

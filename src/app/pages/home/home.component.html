@@ -1,0 +1,117 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <app-card title="Items Sold" [background]="'bg-light-blue'" [icon]="'ion-bag'">
+        <div>
+          <h2 class="text-center">{{_itemsSoldSummary?.item1}}</h2>
+          <h5 class="row text-center">{{_itemsSoldSummary?.item2}}</h5>
+          <h5 class="row text-center">{{_itemsSoldSummary?.item3}}</h5>
+        </div>
+      </app-card>
+      <app-card title="Gross Sales" [background]="'bg-light-blue'" [icon]="'ion-cash'">
+        <div>
+          <h2 class="text-center">{{_grossSalesSummary?.item1}}</h2>
+          <h5 class="row text-center">{{_grossSalesSummary?.item2}}</h5>
+          <h5 class="row text-center">{{_grossSalesSummary?.item3}}</h5>
+        </div>
+      </app-card>
+      <app-card title="Customer Visits" [background]="'bg-light-blue'" [icon]="'ion-ios-people'">
+        <div>
+          <h2 class="text-center">{{_customersSalesSummary?.item1}}</h2>
+          <h5 class="row text-center">{{_customersSalesSummary?.item2}}</h5>
+          <h5 class="row text-center">{{_customersSalesSummary?.item3}}</h5>
+        </div>
+      </app-card>
+      <app-card title="Payment Methods" [background]="'bg-light-blue'" [icon]="'ion-bag'">
+        <div>
+          <h2 class="text-center">{{_paymentMethodsSummary?.item1}}</h2>
+          <h5 class="row text-center">{{_paymentMethodsSummary?.item2}}</h5>
+          <h5 class="row text-center">{{_paymentMethodsSummary?.item3}}</h5>
+        </div>
+      </app-card>
+    </div>
+    <!-- /.row -->
+    <!-- Main row -->
+    <div class="row">
+      <!-- Left col -->
+      <section class="col-lg-7 connectedSortable">
+
+        <div class="box box-solid">
+          <canvas baseChart width="400" height="300"
+                  [datasets]="_lineChartData"
+                  [labels]="_lineChartLabels"
+                  [options]="lineChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType" ></canvas>
+        </div>
+        <!-- /.box (chat box) -->
+
+        <!-- PRODUCT LIST -->
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Recently Added Products</h3>
+
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <app-product-list [productList]="_productList"></app-product-list>
+          </div>
+        </div>
+        <!-- /.box -->
+      </section>
+      <!-- /.Left col -->
+      <!-- right col (We are only adding the ID to make the widgets sortable)-->
+      <section class="col-lg-5 connectedSortable">
+
+        <!-- Table box -->
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title">Top Items by Sales</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body no-padding">
+            <table class="table table-striped">
+
+              <tr *ngFor="let item of _topSales; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{item.name}}</td>
+                <td>
+                  {{item.totalAmoun}}
+                </td>
+                <td>{{item.totalSales}}</td>
+              </tr>
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+
+        <div class="box box-default">
+          <canvas baseChart
+                  height="200"
+                  [data]="_pieChartData"
+                  [labels]="_pieChartLabels"
+                  [chartType]="pieChartType" ></canvas>
+        </div>
+        <!-- /.box -->
+
+
+      </section>
+      <!-- right col -->
+    </div>
+    <!-- /.row (main row) -->
+
+  </section>
+  <!-- /.content -->
+</div>

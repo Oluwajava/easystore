@@ -1,0 +1,26 @@
+<div class="box box-solid">
+  <!-- Date and time range -->
+  <div class="form-group">
+    <div class="input-group padding">
+      <div class="col-md-4">
+        <select class="form-control">
+          <option *ngFor="let category of _categories">{{category.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <input type="text" name="daterangeInput" daterangepicker  class="form-control" />
+      </div>
+      <div>
+        <button class="btn btn-primary">Filter</button>
+      </div>
+    </div>
+  </div>
+
+  <canvas baseChart width="400" height="200"
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType" ></canvas>
+</div>

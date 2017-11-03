@@ -1,0 +1,25 @@
+<div class="box box-solid">
+
+  <div class="form-group">
+    <div class="input-group padding">
+      <div class="col-md-4">
+        <select class="form-control">
+          <option class="form-control" *ngFor="let employee of _employees">{{employee.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <input type="text" name="daterangeInput" daterangepicker  class="form-control" />
+      </div>
+      <div>
+        <button class="btn btn-primary">Filter</button>
+      </div>
+    </div>
+  </div>
+  <canvas baseChart width="400" height="200"
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType" ></canvas>
+</div>

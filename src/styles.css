@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "geomanist";
+  src: url("/src/assets/dist/fonts/geomanist-regular-webfont.ttf") format("truetype")
+}
+
+body, html {
+  height: 100% !important;
+  width: 100%;
+  font-family: geomanist;
+}
+.active-link{
+  background: #1E282C;
+
+}
+
+.active-link > a {
+  color: #fff;
+}
+
+.content-wrapper{
+  background: #fff;
+}
+
+.table-fire .dataTable {
+  background-color: #ffffff;
+  border-spacing: 0;
+  border-collapse: collapse !important;
+  color: #989898;
+  border: 0;
+}
+
+
+.table-fire .dataTable thead {
+  background-color: #d8d8d8;
+  color: #000 ;
+}
+
+.table-fire .dataTable > thead > tr > th,
+.table-fire .dataTable > tbody > tr > th,
+.table-fire .dataTable > tfoot > tr > th {
+  padding: 15px 40px;
+  border-left: 1px solid #ddd;
+}
+
+.table-fire .dataTable > thead > tr > td,
+.table-fire .dataTable > tbody > tr > td,
+.table-fire .dataTable > tfoot > tr > td {
+  padding: 12px 40px;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+}
+
+.table-fire .dataTable .btn-toolbar .btn {
+  color: #a73406;
+}
+
+.table-fire .dataTable > thead > tr > th:first-child
+.table-fire .dataTable > tr > td:first-child{
+  border-left: 0;
+}
+
+.table-fire .dataTable > tbody > tr > td:first-of-type {
+  border-left: 0;
+}
+
+/*table-cell-view-mode > div {*/
+  /*font-size: 1.875em;*/
+/*}*/
+
+
